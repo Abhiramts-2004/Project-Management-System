@@ -1,16 +1,40 @@
-# React + Vite
+# Frontend - Project Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend application for the Project Management System, built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Kanban Board:** Interactive drag-and-drop board for managing task states.
+- **Dashboard:** Role-specific dashboards for Admins, Employees, and Testers.
+- **Authentication:** Login and Registration pages with JWT integration.
+- **Responsive Design:** Optimized for various screen sizes.
 
-## React Compiler
+## Project Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/components`: Reusable UI components (e.g., Button, Input, KanbanColumn).
+- `src/pages`: Application pages (e.g., Login, Dashboard, ProjectList).
+- `src/context`: React Context for state management (AuthContext, ToastContext).
+- `src/services`: API service functions for backend communication.
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Install Dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+2.  **Run Development Server:**
+
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for Production:**
+    ```bash
+    npm run build
+    ```
+
+## Configuration
+
+The frontend expects the backend API to be running at `http://localhost:5000`. If your backend runs on a different port, update the API base URL in `src/services/api.js`.
